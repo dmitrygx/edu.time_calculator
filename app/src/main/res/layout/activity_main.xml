@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#eeeeee"
+    android:stretchColumns="*"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableRow android:background="#cccccc"
+        android:padding="5dp"
+        android:layout_width="wrap_content">
+        <TextView android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="Hours"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+        <TextView android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="Minutes"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView" />
+    </TableRow>
+    <TableRow android:padding="5dp">
+        <TextView android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+        <EditText
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:text="0"
+            android:ems="10"
+            android:id="@+id/editText1" />
+
+        <EditText
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:text="0"
+            android:ems="10"
+            android:id="@+id/editText2" />
+    </TableRow>
+    <TableRow android:padding="5dp">
+        <TextView android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="End"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <EditText
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:text="0"
+            android:ems="10"
+            android:id="@+id/editText3" />
+        <EditText
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:text="0"
+            android:ems="10"
+            android:id="@+id/editText4" />
+    </TableRow>
+
+    <TableRow android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="Difference"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <TextView android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView1"
+            />
+        <TextView android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            />
+    </TableRow>
+
+    <TableRow android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center_horizontal"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView3"
+        />
+    </TableRow>
+</TableLayout>
