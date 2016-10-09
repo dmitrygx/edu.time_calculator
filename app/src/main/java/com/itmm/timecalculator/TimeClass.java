@@ -60,22 +60,11 @@ public class TimeClass {
     }
 
     public String getDifferenceHours() {
-        if (validateInputParams()) {
-            int result = MinuteDifference() / 60;
-            return String.valueOf(result);
-        }
-        else {
-            return "0";
-        }
+        return String.valueOf(MinuteDifference() / 60);
     }
 
     public String getDifferenceMinutes() {
-        if (validateInputParams()) {
-            return String.valueOf(MinuteDifference() % 60);
-        }
-        else {
-            return "0";
-        }
+        return String.valueOf(MinuteDifference() % 60);
     }
 
     public boolean validateInputParams() {

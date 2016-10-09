@@ -32,11 +32,20 @@ public class MainActivity extends AppCompatActivity implements TimeInput.InputHa
     public void startHoursIn(String hours) {
         OutputErrorTextView.setText("");
         if ((!hours.equals("")) && (TimeClass.valideteBeforeSet(hours, TimeClass.HOUR))) {
-            time.setStartHour(Integer.valueOf(hours));
-            OutputHoursTextView.setText(time.getDifferenceHours());
-            OutputMinutesTextView.setText(time.getDifferenceMinutes());
+            if (time.validateInputParams()) {
+                time.setStartHour(Integer.valueOf(hours));
+                OutputHoursTextView.setText(time.getDifferenceHours());
+                OutputMinutesTextView.setText(time.getDifferenceMinutes());
+            }
+            else {
+                OutputHoursTextView.setText("0");
+                OutputMinutesTextView.setText("0");
+                OutputErrorTextView.setText("WARNING: Start time MUST be less than End time");
+            }
         }
         else {
+            OutputHoursTextView.setText("0");
+            OutputMinutesTextView.setText("0");
             OutputErrorTextView.setText("WARNING: Wrong value of Start Hours");
         }
     }
@@ -45,11 +54,20 @@ public class MainActivity extends AppCompatActivity implements TimeInput.InputHa
     public void startMinutesIn(String minutes) {
         OutputErrorTextView.setText("");
         if ((!minutes.equals("")) && (TimeClass.valideteBeforeSet(minutes, TimeClass.MINUTE))) {
-            time.setStartMinute(Integer.valueOf(minutes));
-            OutputHoursTextView.setText(time.getDifferenceHours());
-            OutputMinutesTextView.setText(time.getDifferenceMinutes());
+            if (time.validateInputParams()) {
+                time.setStartMinute(Integer.valueOf(minutes));
+                OutputHoursTextView.setText(time.getDifferenceHours());
+                OutputMinutesTextView.setText(time.getDifferenceMinutes());
+            }
+            else {
+                OutputHoursTextView.setText("0");
+                OutputMinutesTextView.setText("0");
+                OutputErrorTextView.setText("WARNING: Start time MUST be less than End time");
+            }
         }
         else {
+            OutputHoursTextView.setText("0");
+            OutputMinutesTextView.setText("0");
             OutputErrorTextView.setText("WARNING: Wrong value of Start Minutes");
         }
 
@@ -59,11 +77,20 @@ public class MainActivity extends AppCompatActivity implements TimeInput.InputHa
     public void endHoursIn(String hours) {
         OutputErrorTextView.setText("");
         if ((!hours.equals("")) && (TimeClass.valideteBeforeSet(hours, TimeClass.HOUR))) {
-            time.setEndHour(Integer.valueOf(hours));
-            OutputHoursTextView.setText(time.getDifferenceHours().toString());
-            OutputMinutesTextView.setText(time.getDifferenceMinutes());
+            if (time.validateInputParams()) {
+                time.setEndHour(Integer.valueOf(hours));
+                OutputHoursTextView.setText(time.getDifferenceHours().toString());
+                OutputMinutesTextView.setText(time.getDifferenceMinutes());
+            }
+            else {
+                OutputHoursTextView.setText("0");
+                OutputMinutesTextView.setText("0");
+                OutputErrorTextView.setText("WARNING: Start time MUST be less than End time");
+            }
         }
         else {
+            OutputHoursTextView.setText("0");
+            OutputMinutesTextView.setText("0");
             OutputErrorTextView.setText("WARNING: Wrong value of End Hours");
         }
     }
@@ -72,11 +99,21 @@ public class MainActivity extends AppCompatActivity implements TimeInput.InputHa
     public void endMinutesIn(String minutes) {
         OutputErrorTextView.setText("");
         if ((!minutes.equals("")) && (TimeClass.valideteBeforeSet(minutes, TimeClass.MINUTE))) {
-            time.setEndMinute(Integer.valueOf(minutes));
-            OutputHoursTextView.setText(time.getDifferenceHours());
-            OutputMinutesTextView.setText(time.getDifferenceMinutes());
+
+            if (time.validateInputParams()) {
+                time.setEndMinute(Integer.valueOf(minutes));
+                OutputHoursTextView.setText(time.getDifferenceHours());
+                OutputMinutesTextView.setText(time.getDifferenceMinutes());
+            }
+            else {
+                OutputHoursTextView.setText("0");
+                OutputMinutesTextView.setText("0");
+                OutputErrorTextView.setText("WARNING: Start time MUST be less than End time");
+            }
         }
         else {
+            OutputHoursTextView.setText("0");
+            OutputMinutesTextView.setText("0");
             OutputErrorTextView.setText("WARNING: Wrong value of End Minutes");
         }
     }
